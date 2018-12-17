@@ -1,0 +1,12 @@
+[user]
+  name = Josh Schultz
+  email = joshjs+veryfancy@gmail.com
+[color]
+  ui = auto
+[alias]
+  amend = commit --amend
+  ff = merge --ff-only
+
+  # creates local branch for pr from remote and checks it out (defaults to upstream or origin)
+  pr  = "!f() { git fetch -fu ${2:-$(git remote |grep ^upstream || echo origin)} refs/pull/$1/head:pr/$1 && git checkout pr/$1; }; f"
+
