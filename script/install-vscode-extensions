@@ -1,0 +1,19 @@
+#!/bin/bash
+set -e
+
+if ! command -v code >/dev/null
+then
+  echo "VS Code not installed"; exit 1;
+fi
+
+EXTENSIONS="$(code --list-extensions)"
+EXTENSION_FILE="$(dirname "$0")/../vscode-extensions"
+grep -v '^ *#' < "$EXTENSION_FILE" | while IFS= read -r EXTENSION
+do
+  if echo "$EXTENSIONS" | grep -q "$EXTENSION"
+  then
+    echo "Extension '$EXTENSION' is already installed."
+  else
+    code --install-extension "$EXTENSION"
+  fi
+done
