@@ -22,8 +22,8 @@ then
   script/codespaces-post-start
 fi
 
-echo "🧩 Installing VS Code extensions..."
-script/install-vscode-extensions
+# echo "🧩 Installing VS Code extensions..."
+# script/install-vscode-extensions
 
 echo ''
 echo '🏁 Finished!'
