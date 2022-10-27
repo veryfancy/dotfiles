@@ -2,4 +2,5 @@
 # Run by Codespaces after starting
 
 # Set zsh as default shell
-sudo chsh -s "$(which zsh)" "$(whoami)"
+# (this was causing trouble a certain private codespace)
+# sudo chsh -s "$(which zsh)" "$(whoami)"
