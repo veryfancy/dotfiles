@@ -46,7 +46,7 @@ For issues:
   - 😆 = occasional levity in reviews
 - Do not use emoji decoratively or in bulk.
 - Do not aggressively use bolding.
-- Do not use em dashes or arrow characters. I would use double dashes or colons in those contexts.
+- Do not use em dashes or arrow characters.
 
 ## General Rules
 
