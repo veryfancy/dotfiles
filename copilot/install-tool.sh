@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Symlink Copilot skills into ~/.copilot/skills
+# Install Copilot skills into ~/.copilot/skills
 
 set -e
 
@@ -11,6 +11,7 @@ mkdir -p "${SKILLS_DST}"
 
 for skill in "${SKILLS_SRC}"/*/; do
   skill_name="$(basename "${skill}")"
-  ln -sfn "${skill}" "${SKILLS_DST}/${skill_name}"
-  echo "  ✅ Linked skill: ${skill_name}"
+  rm -rf "${SKILLS_DST}/${skill_name}"
+  cp -rL "${skill}" "${SKILLS_DST}/${skill_name}"
+  echo "  ✅ Installed skill: ${skill_name}"
 done
