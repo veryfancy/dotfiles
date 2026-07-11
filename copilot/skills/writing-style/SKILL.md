@@ -5,9 +5,7 @@ description: Use this skill when asked to write or draft documents, PR descripti
 
 ## Writing Style
 
-Write like a senior engineer talking to other engineers. Be direct, specific, and concise. Do not hedge, pad, or soften. Do not use phrases like "under certain conditions" or "consider the possibility that." State things plainly.
-
-Name exact entities: method names, pages, database fields, feature flags. Never abstract to "the system" or "downstream services" when you can name them.
+Be direct, specific, and concise. No hedging or softening. Skip filler like "under certain conditions" or "consider the possibility that." Name exact entities (method names, pages, database fields, feature flags) instead of abstracting to "the system," but describe behavior in plain language, not stacked-noun phrases: "when a team gains Copilot from an org" beats "on indirect enablement cascades." Explain the why plainly enough for a teammate outside the code; use exact names for the how.
 
 For PR titles:
 
@@ -16,13 +14,13 @@ For PR titles:
 
 For PR bodies:
 
-- Adhere to PR templates where practical but don't hesitate to throw them out for simple changes.
+- Follow PR templates where practical, but throw them out for simple changes and drop sections that don't apply rather than writing "N/A".
 - Lead with the behavioral change or bug being fixed.
 - Keep it short. If the diff is self-explanatory, the body can be one sentence or empty.
 
 For commit messages:
 
-- Describe the behavioral change in a full sentence. No conventional-commit prefixes.
+- Write a short one-line message describing the behavioral change. No conventional-commit prefixes.
 
 For code review comments:
 
