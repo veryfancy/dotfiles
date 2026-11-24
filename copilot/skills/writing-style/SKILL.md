@@ -5,7 +5,7 @@ description: Use this skill when asked to write or draft documents, PR descripti
 
 ## Writing Style
 
-Be direct, specific, and concise. No hedging or softening. Skip filler like "under certain conditions" or "consider the possibility that." Name exact entities (method names, pages, database fields, feature flags) instead of abstracting to "the system," but describe behavior in plain language, not stacked-noun phrases: "when a team gains Copilot from an org" beats "on indirect enablement cascades." Explain the why plainly enough for a teammate outside the code; use exact names for the how.
+Be direct and concise. Prefer plainspoken phrasing. Avoid stacked-noun phrases: "when a team gains Copilot from an org" beats "on indirect enablement cascades." Avoid unnecessary hedging and softening. Skip filler like "under certain conditions" or "consider the possibility that." Explain the why plainly enough for a teammate outside the code; use more precision when the how is needed.
 
 For PR titles:
 
@@ -14,34 +14,31 @@ For PR titles:
 
 For PR bodies:
 
-- Follow PR templates where practical, but throw them out for simple changes and drop sections that don't apply rather than writing "N/A".
 - Lead with the behavioral change or bug being fixed.
-- Keep it short. If the diff is self-explanatory, the body can be one sentence or empty.
+- Focus on meaningful changes rather than enumerating implementation details or modified files.
+- Describe the changes themselves using imperative verbs ("Update X to handle Y") rather than describing the resulting behavior ("X now handles Y").
+- Follow PR templates where practical, but throw them out for simple changes and drop sections that don't apply rather than writing "N/A".
+- Keep it short and reviewer-friendly.
 
 For commit messages:
 
-- Write a short one-line message describing the behavioral change. No conventional-commit prefixes.
+- Use one-liners describing the changes. No conventional-commit prefixes.
 
 For code review comments:
 
 - Be clear when a comment is nit/non-blocking (nit == stylistic or cosmetic; non-blocking == worth noting but not blocking for the PR)
 - When disagreeing, argue from specific failure modes, not abstract principles. Describe the concrete scenario that breaks.
-- When the author addresses feedback well or finds a better approach, acknowledge it warmly and specifically: name what they did and why it's good.
+- Be inquisitive when exploring a design decision; be direct when identifying a concrete problem.
 - A review approval does not require comment if there's nothing to call out.
 
 For issues:
 
 - Use issue templates where practical but don't hesitate to throw them out for simple issues.
-- Be specific in the body. Name the exact code path, method, event, or field involved when you know those things. Avoid vague descriptions (unless you lack the details in the moment; that can be acceptable).
+- Match the level of specificity to what's known. When the cause and fix are understood, name the relevant code path, method, event, or field and describe the intended change. When further investigation is needed, describe the observed problem without prematurely prescribing a solution.
 
-## Tone and Gratitude
+## Tone and Formatting
 
 - Be warm when warranted, but don't manufacture warmth.
-- Use emoji sparingly and meaningfully:
-  - ✨ = appreciation, kudos
-  - 🐛 = bug (in issue titles)
-  - 🧹 = cleanup task (in issue titles)
-  - 😆 = occasional levity in reviews
 - Do not use emoji decoratively or in bulk.
 - Do not aggressively use bolding.
 - Do not use em dashes or arrow characters.
@@ -49,4 +46,4 @@ For issues:
 ## General Rules
 
 - Prefer concrete examples over abstract descriptions.
-- Keep explanations as short as they can be while remaining precise.
+- Keep explanations as short and plainspoken as they can be while remaining precise.
